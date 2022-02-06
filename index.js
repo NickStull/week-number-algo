@@ -1,8 +1,10 @@
+// --------------- Date Functions -------------- //
+
 const dateNow = Date.now()
-console.log(dateNow) //Expected output: the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC
+// console.log(dateNow) //Expected output: the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC
 
 const currentDate = new Date(dateNow)
-console.log(currentDate.toString()) //Expected output: the full date string in local time.
+// console.log(currentDate.toString()) //Expected output: the full date string in local time.
 
 const day = currentDate.getDay()
 // console.log(day) //Expected output: the day of the week (0–6) for the specified date according to local time.
@@ -28,13 +30,20 @@ const seconds = currentDate.getSeconds()
 const milliseconds = currentDate.getMilliseconds()
 // console.log(milliseconds) //Expected output: the milliseconds (0–999) in the specified date according to local time.
 
+
+
+// --------------- Week Number Algo --------------- //
+
+const testDate = new Date(Date.now()) // Replace Date.now() with any test date
+console.log(testDate) // Expected output: test date in millisecond form
+
 const janFirst = new Date(fullYear,0,1,0)
 console.log(janFirst) //Expected output: Jan 1st of the current year at 00:00
 
 const janFirstDayOfWeek = janFirst.getDay()
 console.log(janFirstDayOfWeek) //Expected output: the day of the week (0–6) for Jan 1st of current year. (added 1 because the)
 
-const dayNumberOfYear = (Math.floor((currentDate - janFirst) / 86400000)+1)
+const dayNumberOfYear = (Math.floor((testDate - janFirst) / 86400000)+1)
 console.log(dayNumberOfYear) //Expected output: number of days the current day is of the year. Floor rounds down to nearest whole. Adds 1 to include Jan 1st
 
 const weekNumber = Math.ceil((dayNumberOfYear + janFirstDayOfWeek)/7)
