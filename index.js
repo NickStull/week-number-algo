@@ -6,6 +6,9 @@ console.log(dateNow) //Expected output: the number of milliseconds elapsed since
 const currentDate = new Date(dateNow)
 console.log(currentDate.toString()) //Expected output: the full date string in local time.
 
+// currentDate.setFullYear(2021)
+// currentDate.setMonth(0)
+// currentDate.setDate(1)
 currentDate.setHours(00)
 currentDate.setMinutes(00)
 currentDate.setSeconds(00)
@@ -17,6 +20,9 @@ console.log(primitive)
 const hopefullyJanOne = new Date(primitive)
 console.log(hopefullyJanOne.toString())
 
+// currentDate.setFullYear(2021)
+// currentDate.setMonth(11)
+// currentDate.setDate(31)
 currentDate.setHours(23)
 currentDate.setMinutes(59)
 currentDate.setSeconds(59)
